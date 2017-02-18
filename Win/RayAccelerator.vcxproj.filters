@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\RayAccelerator\Bvh2.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\Camera.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\DisplayBuffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RayAccelerator\Environment.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\PathTracingRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\LightPath.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\main.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\Materials.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RayAccelerator\RayAccelerator.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RayAccelerator\Scene.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RayAccelerator\Threading.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RayAccelerator\ThreadPool.cpp">
+      <Filter>RayAccelerator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\TiledRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer\WhittedRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RayAccelerator\Bvh2.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\Camera.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\DisplayBuffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\Context.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\Environment.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\GroupAllocation.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\Kernels.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\PathTracingRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\LightPath.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\Materials.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\RayAccelerator.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\Scene.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\SceneData.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\SimdRandom.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\Threading.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RayAccelerator\ThreadPool.h">
+      <Filter>RayAccelerator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\TiledRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\VectorMath.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer\WhittedRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{d365f096-8de0-4140-9987-243fd48f3b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RayAccelerator">
+      <UniqueIdentifier>{b8fcf153-0e17-40cb-b44f-8775f96fafcd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

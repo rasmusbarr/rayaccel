@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\RayAccelerator\Bvh2.cpp" />
+    <ClCompile Include="..\RayAccelerator\Environment.cpp" />
+    <ClCompile Include="..\RayAccelerator\RayAccelerator.cpp" />
+    <ClCompile Include="..\RayAccelerator\Scene.cpp" />
+    <ClCompile Include="..\RayAccelerator\Threading.cpp" />
+    <ClCompile Include="..\RayAccelerator\ThreadPool.cpp" />
+    <ClCompile Include="..\Renderer\Camera.cpp" />
+    <ClCompile Include="..\Renderer\DisplayBuffer.cpp" />
+    <ClCompile Include="..\Renderer\LightPath.cpp" />
+    <ClCompile Include="..\Renderer\main.cpp" />
+    <ClCompile Include="..\Renderer\Materials.cpp" />
+    <ClCompile Include="..\Renderer\PathTracingRenderer.cpp" />
+    <ClCompile Include="..\Renderer\TiledRenderer.cpp" />
+    <ClCompile Include="..\Renderer\WhittedRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RayAccelerator\Bvh2.h" />
+    <ClInclude Include="..\RayAccelerator\Context.h" />
+    <ClInclude Include="..\RayAccelerator\Environment.h" />
+    <ClInclude Include="..\RayAccelerator\GroupAllocation.h" />
+    <ClInclude Include="..\RayAccelerator\Kernels.h" />
+    <ClInclude Include="..\RayAccelerator\RayAccelerator.h" />
+    <ClInclude Include="..\RayAccelerator\Scene.h" />
+    <ClInclude Include="..\RayAccelerator\Threading.h" />
+    <ClInclude Include="..\RayAccelerator\ThreadPool.h" />
+    <ClInclude Include="..\Renderer\Camera.h" />
+    <ClInclude Include="..\Renderer\DisplayBuffer.h" />
+    <ClInclude Include="..\Renderer\LightPath.h" />
+    <ClInclude Include="..\Renderer\Materials.h" />
+    <ClInclude Include="..\Renderer\PathTracingRenderer.h" />
+    <ClInclude Include="..\Renderer\Renderer.h" />
+    <ClInclude Include="..\Renderer\SceneData.h" />
+    <ClInclude Include="..\Renderer\SimdRandom.h" />
+    <ClInclude Include="..\Renderer\TiledRenderer.h" />
+    <ClInclude Include="..\Renderer\VectorMath.h" />
+    <ClInclude Include="..\Renderer\WhittedRenderer.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{224944E3-8F5F-44B3-A4F0-C0762D5A65DA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RayAccelerator</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>External\Embree;External\lodepng;External\pfm;RayAccelerator;Renderer;Renderer/Brdfs;Traversal;TaskLog;C:\Program Files (x86)\Intel\OpenCL SDK\4.6\include;.;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Intel\OpenCL SDK\4.6\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\include;..\RayAccelerator;C:\Program Files (x86)\Intel\OpenCL SDK\4.6\include;.;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Intel\OpenCL SDK\4.6\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>USE_EMBREE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <AdditionalIncludeDirectories>C:\Intel\INDE\code_builder_5.1.0.25\include</AdditionalIncludeDirectories>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>embree.lib;opencl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Intel\INDE\code_builder_5.1.0.25\lib\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>USE_EMBREE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>C:\Intel\INDE\code_builder_5.1.0.25\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>embree.lib;OpenCL.lib.;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Intel\INDE\code_builder_5.1.0.25\lib\x64</AdditionalLibraryDirectories>
+    </Link>
+    <Intel_OpenCL_Build_Rules>
+      <Device>1</Device>
+    </Intel_OpenCL_Build_Rules>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
