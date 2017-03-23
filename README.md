@@ -20,5 +20,5 @@ Source code for the example renderer resides in the [Renderer](Renderer) folder.
 
 Details can be found in the published paper:
 
-- Author generated version (coming soon)
+- [Author generated version](http://fileadmin.cs.lth.se/graphics/research/papers/2016/rayacc/rayacc.pdf)
 - [CGF version](http://onlinelibrary.wiley.com/doi/10.1111/cgf.13071/full)
